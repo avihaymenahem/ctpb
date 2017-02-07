@@ -11,6 +11,7 @@
   "author": "Avihay Menahem",
   "license": "ISC",
   "dependencies": {
+    "nodemailer": "^3.0.2",
     "bootstrap": "^3.3.7",
     "koa": "^1.2.4",
     "koa-body": "^1.6.0",
