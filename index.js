@@ -9,7 +9,7 @@ var app = require('koa')(),
             uploadDir: path.join(__dirname, './uploads'),
             keepExtensions : true,
             onFileBegin: (name, file) => {
-                file.path = "./uploads/" + file.name;
+                file.path = "/home/pi/ctpb/uploads/" + file.name;
             }
         } }),
     bodyParser = require('koa-bodyparser'),
@@ -42,7 +42,7 @@ router.post('/upload', koaBody, function *(next) {
         subject: 'RPI Public IP Address', // Subject line
         text: 'Clicktale photo booth image', // plain text body
         attachments: [{   // file on disk as an attachment
-            path: './uploads/webcam.jpg' // stream this file
+            path: '/home/pi/ctpb/uploads/webcam.jpg' // stream this file
         }]
     };
 
