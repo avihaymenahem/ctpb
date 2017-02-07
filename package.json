@@ -13,9 +13,14 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "koa": "^1.2.4",
+    "koa-body": "^1.6.0",
     "koa-bodyparser": "^2.3.0",
+    "koa-cors": "0.0.16",
+    "koa-multer": "^1.0.1",
     "koa-router": "^5.4.0",
+    "parse": "^1.9.2",
     "request": "^2.79.0",
+    "slack-node": "^0.1.8",
     "webcamjs": "^1.0.19"
   },
   "devDependencies": {

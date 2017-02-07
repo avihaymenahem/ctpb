@@ -19,7 +19,6 @@ body {
 
 #cameraResult {
   display: none;
-  background: #fff;
   position: absolute;
   top: 0;
   left: 0;
