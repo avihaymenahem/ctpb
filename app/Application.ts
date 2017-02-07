@@ -47,7 +47,7 @@ export default class Application {
             DomProvider.setContent(resultElement,  '<img src="'+data_uri+'"/>');
             DomProvider.show(clearBtnElement);
 
-            Webcam.upload(data_uri, '/upload', function(code, text) {
+            Webcam.upload(data_uri, 'http://localhost:3002/upload', function(code, text) {
                 // Upload complete!
                 // 'code' will be the HTTP response code from the server, e.g. 200
                 // 'text' will be the raw response content
