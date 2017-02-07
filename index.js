@@ -2,14 +2,13 @@
 
 var app = require('koa')(),
     path = require("path"),
-    Slack = require("slack-node"),
     router = require('koa-router')(),
     koaBody = require('koa-body')({ multipart: true,
         formidable: {
             uploadDir: path.join(__dirname, './uploads'),
             keepExtensions : true,
             onFileBegin: (name, file) => {
-                file.path = "./uploads/" + file.name;
+                //file.path = "./uploads/" + file.name;
             }
         } }),
     bodyParser = require('koa-bodyparser'),
