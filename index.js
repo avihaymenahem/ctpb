@@ -2,14 +2,15 @@
 
 var app = require('koa')(),
     router = require('koa-router')(),
-    bodyParser = require('koa-bodyparser')(),
+    bodyParser = require('koa-bodyparser'),
     Common = require("./Utils/Common").default,
     ENV_PORT = 3002;
 
 app.use(bodyParser());
 
 router.get('/', function *(next) {
-    let content = yield Common.readFileThunk("./index.html");
+    //let content = yield Common.readFileThunk("./index.html");
+    let content = yield Common.readFileThunkHttp("http://localhost:3666");
     this.body = content;
 });
 
