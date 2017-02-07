@@ -1,0 +1,51 @@
+#cameraPreview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 480px;
+  height: 320px;
+  z-index: 1;
+}
+
+#cameraResult {
+  display: none;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 480px;
+  height: 320px;
+  z-index: 3;
+}
+
+.btn {
+  width: 150px;
+  height: 45px;
+  line-height: 45px;
+  background-color: #fff;
+  color: #4f234a;
+  font-family: Arial;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #361b31;
+  border-radius: 5px;
+  position: absolute;
+}
+
+.take-snapshot-btn {
+  top: 260px;
+  left: 10px;
+  z-index: 2;
+}
+
+.clear-snapshot-btn {
+  display: none;
+  top: 260px;
+  left: 260px;
+  z-index: 4;
+}
+
+.take-snapshot-btn:hover {
+  background-color: #d3d3d3;
+}
