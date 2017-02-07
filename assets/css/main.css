@@ -7,6 +7,24 @@ body {
   background: linear-gradient(to bottom,  #4f234a 0%,#3f0030 100%);
 }
 
+#ctLogo {
+  width: 90px;
+  height: 18px;
+  text-indent: -9999px;
+  overflow: hidden;
+  background: url('../img/clicktale-logo.png') no-repeat #fff center;
+  background-size: 90px 18px;
+  float: left;
+  margin: 1px 77px 0 1px;
+  position: absolute;
+  z-index: 6;
+  left: 26px;
+  top: 280px;
+  padding: 10px;
+  border-radius: 0 5px 0 0;
+  opacity: 0.5;
+}
+
 #cameraPreview {
   position: absolute;
   top: 0;
@@ -44,14 +62,14 @@ body {
 }
 
 .take-snapshot-btn {
-  top: 250px;
+  top: 10px;
   left: 40px;
   z-index: 2;
 }
 
 .clear-snapshot-btn {
   display: none;
-  top: 250px;
+  top: 10px;
   left: 278px;
   z-index: 4;
 }

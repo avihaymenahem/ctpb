@@ -29,29 +29,25 @@ app.use(cors());
 app.use(bodyParser());
 
 router.get('/', function *(next) {
-    //let content = yield Common.readFileThunk("./index.html");
-    let content = yield Common.readFileThunkHttp("http://localhost:3666");
-    this.body = content;
+    this.body = yield Common.readFileThunkHttp("http://localhost:3666");
 });
 
 router.post('/upload', koaBody, function *(next) {
-
     let mailOptions = {
         from: '"Your RPI" <nodemailerrpi@gmail.com>', // sender address
         to: 'avihay@three-dev.com', // list of receivers
-        subject: 'RPI Public IP Address', // Subject line
+        subject: 'CT Photo Boot Image', // Subject line
         text: 'Clicktale photo booth image', // plain text body
         attachments: [{   // file on disk as an attachment
             path: '/home/pi/ctpb/uploads/webcam.jpg' // stream this file
         }]
     };
 
-// send mail with defined transport object
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             return console.log(error);
         }
-        console.log("File uploaded");
+        console.log("File uploaded and sent");
     });
     this.body = "ok";
 });

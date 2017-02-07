@@ -46,6 +46,12 @@ module.exports = (function makeWebpackConfig () {
                     test: /\.ts?$/,
                     loader : 'ts-loader'
                 }, {
+                    test: /\.(png|jpg|jpeg|gif)$/,
+                    loader: 'file-loader',
+                    query: {
+                        name: baseAssetsPath + "imgs/[hash].[name].[ext]"
+                    }
+                }, {
                     test: /\.js$/,
                     loader: 'babel-loader',
                     exclude: [/node_modules/, /dist/]
